@@ -1,5 +1,5 @@
 #!/bin/bash
 
 docker run --rm --privileged multiarch/qemu-user-static:register --reset
-docker build -t dustinrue/centos:7-x86 . -f Dockerfile.x86
+docker build -t dustinrue/centos:7-x86 . 
 docker build -t dustinrue/centos:7-arm . -f Dockerfile.arm
