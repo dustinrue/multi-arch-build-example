@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker manifest create dustinrue/centos:7 dustinrue/centos:7-x86 dustinrue/centos:7-arm
+docker manifest annotate dustinrue/centos:7 dustinrue/centos:7-arm --os linux --arch arm
+docker manifest push dustinrue/centos:7

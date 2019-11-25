@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker push dustinrue/centos:7-x86
+docker push dustinrue/centos:7-arm

@@ -1,0 +1,8 @@
+FROM arm32v7/centos:7
+ 
+COPY qemu-arm-static /usr/bin
+# armhfp 
+RUN echo "armhfp" > /etc/yum/vars/basearch; \
+    echo "armv7hl" > /etc/yum/vars/arch; \
+    echo "armv7hl-redhat-linux-gpu" > /etc/rpm/platform
+RUN yum upgrade -y && yum clean all
